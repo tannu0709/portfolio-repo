@@ -483,22 +483,39 @@
       }
       .proj-card .links {
         display: flex;
-        gap: 1.5rem;
+        gap: 10px;
+        margin-top: 18px;
       }
       .proj-card .links a {
-        font-family: "DM Mono", monospace;
-        font-size: 0.75rem;
+        font-family: "JetBrains Mono", "DM Mono", monospace;
+        font-size: 0.72rem;
         color: var(--txt-dim);
         text-decoration: none;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.05em;
         text-transform: uppercase;
-        border-bottom: 1px solid var(--border-hi);
-        padding-bottom: 1px;
-        transition: 0.2s;
+        border: 1px solid var(--border-hi);
+        padding: 6px 13px;
+        border-radius: 3px;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease,
+          border-color 0.2s ease,
+          transform 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
       }
-      .proj-card .links a:hover {
-        color: var(--accent);
-        border-bottom-color: var(--accent);
+      .proj-card .links a:first-child:hover {
+        background: var(--ink, #14181f);
+        color: #fff;
+        border-color: var(--ink, #14181f);
+        transform: translateY(-1px);
+      }
+      .proj-card .links a:last-child:hover {
+        background: var(--accent, #2d7d8c);
+        color: #fff;
+        border-color: var(--accent, #2d7d8c);
+        transform: translateY(-1px);
       }
 
       /* ---------- EDUCATION / CERTS ---------- */
@@ -1168,59 +1185,94 @@
         </div>
         <div class="projects reveal-stagger">
           <div class="proj-card">
-            <a href="https://github.com/tannu0709/DashboardUsingExcel">
-              <div class="proj-tag">Business Intelligence</div>
-              <h3>Sales Data Analysis Dashboard</h3>
-              <div class="proj-tools">
-                <span class="chip">Excel</span
-                ><span class="chip">Power BI</span>
-              </div>
-              <p>
-                Cleaned and analyzed sales data for an e-commerce company, then
-                built interactive dashboards covering regional performance,
-                top-selling products, and monthly trends.
-              </p>
-              <div class="proj-result">
-                <span class="res-label">Result</span>Identified underperforming
-                regions and helped optimize inventory.
-              </div>
-            </a>
+            <div class="proj-tag">Business Intelligence</div>
+            <h3>Sales Data Analysis Dashboard</h3>
+            <div class="proj-tools">
+              <span class="chip">Excel</span><span class="chip">Power BI</span>
+            </div>
+            <p>
+              Cleaned and analyzed sales data for an e-commerce company, then
+              built interactive dashboards covering regional performance,
+              top-selling products, and monthly trends.
+            </p>
+            <div class="proj-result">
+              <span class="res-label">Result</span>Identified underperforming
+              regions and helped optimize inventory.
+            </div>
+            <div class="links">
+              <a
+                href="https://github.com/tannu0709/DashboardUsingExcel"
+                target="_blank"
+                rel="noopener"
+                >⤴ GitHub</a
+              >
+              <a
+                href="https://dashboard-using-excel.vercel.app/"
+                target="_blank"
+                rel="noopener"
+                >↗ Live Demo</a
+              >
+            </div>
           </div>
           <div class="proj-card">
-            <a href="https://github.com/tannu0709/customer-churn-prediction">
-              <div class="proj-tag">Machine Learning</div>
-              <h3>Customer Churn Prediction</h3>
-              <div class="proj-tools">
-                <span class="chip">Python</span><span class="chip">Pandas</span
-                ><span class="chip">Scikit-learn</span>
-              </div>
-              <p>
-                Built a logistic regression model to predict customer churn from
-                usage data, then visualized feature importance and model
-                performance.
-              </p>
-              <div class="proj-result">
-                <span class="res-label">Result</span>82% prediction accuracy.
-              </div>
-            </a>
+            <div class="proj-tag">Machine Learning</div>
+            <h3>Customer Churn Prediction</h3>
+            <div class="proj-tools">
+              <span class="chip">Python</span><span class="chip">Pandas</span
+              ><span class="chip">Scikit-learn</span>
+            </div>
+            <p>
+              Built a logistic regression model to predict customer churn from
+              usage data, then visualized feature importance and model
+              performance.
+            </p>
+            <div class="proj-result">
+              <span class="res-label">Result</span>82% prediction accuracy.
+            </div>
+            <div class="links">
+              <a
+                href="https://github.com/tannu0709/customer-churn-prediction"
+                target="_blank"
+                rel="noopener"
+                >⤴ GitHub</a
+              >
+              <a
+                href="https://colab.research.google.com/github/tannu0709/customer-churn-prediction/blob/main/src/Customer_Churn_Prediction.ipynb"
+                target="_blank"
+                rel="noopener"
+                >↗ Live Demo</a
+              >
+            </div>
           </div>
           <div class="proj-card">
-            <a href="https://github.com/tannu0709/EDA-on-Netflix">
-              <div class="proj-tag">Exploratory Analysis</div>
-              <h3>Netflix Content Trends (EDA)</h3>
-              <div class="proj-tools">
-                <span class="chip">Python</span><span class="chip">Seaborn</span
-                ><span class="chip">Matplotlib</span>
-              </div>
-              <p>
-                Cleaned and explored the Netflix catalog dataset to surface
-                trends in genre, duration, and content rating over time.
-              </p>
-              <div class="proj-result">
-                <span class="res-label">Result</span>Answered: are Movies or TV
-                Shows more dominant on the platform?
-              </div>
-            </a>
+            <div class="proj-tag">Exploratory Analysis</div>
+            <h3>Netflix Content Trends (EDA)</h3>
+            <div class="proj-tools">
+              <span class="chip">Python</span><span class="chip">Seaborn</span
+              ><span class="chip">Matplotlib</span>
+            </div>
+            <p>
+              Cleaned and explored the Netflix catalog dataset to surface trends
+              in genre, duration, and content rating over time.
+            </p>
+            <div class="proj-result">
+              <span class="res-label">Result</span>Answered: are Movies or TV
+              Shows more dominant on the platform?
+            </div>
+            <div class="links">
+              <a
+                href="https://github.com/tannu0709/EDA-on-Netflix"
+                target="_blank"
+                rel="noopener"
+                >⤴ GitHub</a
+              >
+              <a
+                href="https://colab.research.google.com/github/tannu0709/EDA-on-Netflix/blob/main/src/netflix_eda.ipynb"
+                target="_blank"
+                rel="noopener"
+                >↗ Live Demo</a
+              >
+            </div>
           </div>
         </div>
       </div>
